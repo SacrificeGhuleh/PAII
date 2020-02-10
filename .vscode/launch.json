@@ -1,0 +1,47 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C++ Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetPath}",
+            //"program": "${workspaceRoot}/bin/debug/app",
+            "args": [],
+            "environment": [],
+            "cwd": "${workspaceRoot}/bin/debug",
+            "stopAtEntry": false,
+            "externalConsole": false,
+            // "customLaunchSetupCommands": [
+            //     { "text": "target-run", "description": "run target", "ignoreFailures": false }
+            // ],
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb and add better child debugging",
+                    "text": "-enable-pretty-printing -gdb-set detach-on-fork off",
+                    "ignoreFailures": true
+                }
+            ],
+            "launchCompleteCommand": "exec-run",
+            "linux": {
+                "MIMode": "gdb",
+                "miDebuggerPath": "/usr/bin/gdb",
+                "setupCommands": [
+                    {
+                      "description": "Enable pretty-printing for gdb",
+                      "text": "-enable-pretty-printing",
+                      "ignoreFailures": false
+                    }
+                  ],
+            },
+            "osx": {
+                "MIMode": "lldb"
+            },
+            "windows": {
+                "args": [],
+                "MIMode": "gdb",
+                "miDebuggerPath": "${env:MINGW_BIN}/gdb.exe"
+            }
+        }
+    ]
+}

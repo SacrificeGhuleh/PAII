@@ -1,0 +1,82 @@
+/*
+"${workspaceRoot}"
+"${workspaceRootFolderName}"
+"${file}
+${relativeFile}
+${fileBasename}
+${fileBasenameNoExtension}
+${fileDirname}
+${fileExtname}
+${cwd}
+${lineNumber}"
+${env.PATH}
+*/
+
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "windows": {
+        "command": "cmd",
+        "args": [
+            "/C"
+        ]
+    },
+    "linux": {
+        "command": "sh",
+        "args": [
+            "-c"
+        ]
+    },
+    "osx": {
+        "command": "sh",
+        "args": [
+            "-c"
+        ]
+    },
+    "options": {
+        "cwd": "${workspaceRoot}/build"
+    },
+    "tasks": [
+        {
+            "label": "envSetting",
+            "command": "echo",
+            "args": [
+                "${workspaceRoot}", "${env:MINGW_BIN}", "${env:CMAKE_EXE}", "${env:MINGW_INCLUDE}"
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            }
+        },        
+        {
+            "label": "make",
+            "command": "make",
+            "args": ["${workspaceRoot}/build/Makefile", "-j", "8"],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": "absolute",
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        }
+    ]
+}
