@@ -7,6 +7,8 @@
 #include <vector_types.h>
 #include <vector_functions.h>
 
+#include <device_launch_parameters.h>
+
 #define __CHECK_DATA_
 
 #define FLOAT_EPSILON 0.0001
