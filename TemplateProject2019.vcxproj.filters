@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CudaCompile Include=".\src\Runner.cu" />
+    <CudaCompile Include="CV04.cu">
+      <Filter>CV04</Filter>
+    </CudaCompile>
+    <CudaCompile Include="CudaTimer.cu">
+      <Filter>Common</Filter>
+    </CudaCompile>
+    <CudaCompile Include="CV01.cu">
+      <Filter>CV01</Filter>
+    </CudaCompile>
+    <CudaCompile Include="CV02.cu">
+      <Filter>CV02</Filter>
+    </CudaCompile>
+    <CudaCompile Include="CV03.cu">
+      <Filter>CV03</Filter>
+    </CudaCompile>
+    <CudaCompile Include="CV06.cu">
+      <Filter>CV06</Filter>
+    </CudaCompile>
+    <CudaCompile Include="CV07.cu">
+      <Filter>CV07</Filter>
+    </CudaCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CV01">
+      <UniqueIdentifier>{e987c72a-91f7-4f2f-9d41-e17ab757e318}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CV02">
+      <UniqueIdentifier>{162fd412-f9cc-4996-9c18-3c08c545a77a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CV03">
+      <UniqueIdentifier>{3aa9cc74-f586-4a19-93fd-34c9c2dd1515}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CV04">
+      <UniqueIdentifier>{4a0c1cb9-c2e8-441a-8701-6d5ae2556792}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{9d09511f-40f0-4218-abe9-6889ae420a4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CV06">
+      <UniqueIdentifier>{f2648f29-cdd6-4ea2-b695-9b7ca32a3dc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CV07">
+      <UniqueIdentifier>{f5a09b44-abbd-45d4-81d4-de665319e8f9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CV04.cuh">
+      <Filter>CV04</Filter>
+    </ClInclude>
+    <ClInclude Include="CudaTimer.cuh">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="CV01.cuh">
+      <Filter>CV01</Filter>
+    </ClInclude>
+    <ClInclude Include="CV02.cuh">
+      <Filter>CV02</Filter>
+    </ClInclude>
+    <ClInclude Include="CV03.cuh">
+      <Filter>CV03</Filter>
+    </ClInclude>
+    <ClInclude Include="CV06.cuh">
+      <Filter>CV06</Filter>
+    </ClInclude>
+    <ClInclude Include="imageKernels.cuh" />
+    <ClInclude Include="CV07.cuh">
+      <Filter>CV07</Filter>
+    </ClInclude>
+    <ClInclude Include="Random.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Random.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
