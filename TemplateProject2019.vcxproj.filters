@@ -23,6 +23,13 @@
     <CudaCompile Include="CV07.cu">
       <Filter>CV07</Filter>
     </CudaCompile>
+    <CudaCompile Include="Runner0 - naive.cu" />
+    <CudaCompile Include="Runner2 - 2D grid.cu" />
+    <CudaCompile Include="unifiedMemTest.cu" />
+    <CudaCompile Include="Runner1 - 1D grid.cu" />
+    <CudaCompile Include="CV08.cu">
+      <Filter>CV08</Filter>
+    </CudaCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CV01">
@@ -45,6 +52,9 @@
     </Filter>
     <Filter Include="CV07">
       <UniqueIdentifier>{f5a09b44-abbd-45d4-81d4-de665319e8f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CV08">
+      <UniqueIdentifier>{13f2e7e9-0f95-41a3-97ed-1fbb09d17a6b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -72,6 +82,10 @@
     </ClInclude>
     <ClInclude Include="Random.h">
       <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="arrayUtils.cuh" />
+    <ClInclude Include="CV08.cuh">
+      <Filter>CV08</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
